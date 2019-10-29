@@ -4,6 +4,8 @@
  */
 
 // set up data structures
+
+var visitor = "diaa"
 window.streams = {};
 streams.home = [];
 streams.users = {};
@@ -11,6 +13,8 @@ streams.users.shawndrost = [];
 streams.users.sharksforcheap = [];
 streams.users.mracus = [];
 streams.users.douglascalhoun = [];
+streams.users.diaa= [];
+
 window.users = Object.keys(streams.users);
 
 // utility function for adding tweets to our data structures
@@ -65,5 +69,7 @@ var writeTweet = function(message){
   var tweet = {};
   tweet.user = visitor;
   tweet.message = message;
-  addTweet(tweet);
+  tweet.created_at = Date.now();
+  addTweet(tweet);  
+
 };
